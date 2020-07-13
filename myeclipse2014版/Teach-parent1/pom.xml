@@ -91,6 +91,6 @@
 		<module>Teach-zull1</module>
 		<module>Teach-util1</module>
 		<module>Teach-orm1</module>
-		<module>Teach-ioc1</module>
+		<!--<module>Teach-ioc1</module>-->
 	</modules>
 </project>

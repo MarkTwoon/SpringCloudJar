@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chinasoft.springcloud_1.dao.UserDao">
+
+<select id="selectCityAll" resultType="map">
+select tcity.CITY_ID  as cityId,
+tcity.CITY_NAME  as cityName,
+tcity.CITY_PINYINMA  as   cityPinYinMa,
+tcity.CITY_NUM  as  cityNum
+   from tb_city  as  tcity 
+</select>
+
+<select id="headNumber" resultType="map"   parameterType="map">
+SELECT  count(*)+(select CITY_NUM from tb_city where CITY_ID = #{cityId}) as joinUser,IFNULL(SUM(ash.SHARE_NUMBER),0)+(select CITY_NUM from tb_city where CITY_ID = #{cityId})   as shareMan, 
+ IFNULL(SUM(ash.SHARE_NUMBER),0)+count(*)+(select CITY_NUM * 2 from tb_city where CITY_ID = #{cityId}) as readMan FROM admin_share as ash JOIN tb_user as tu on ash.USER_ID=tu.USER_ID 
+ where tu.CITY_ID = #{cityId};
+</select>
+
+<select id="selectCouponMainByCityId"  resultType="map"  parameterType="map">
+   SELECT tcp.COUPON_ID as couponId,
+   tcy.CITY_NAME as cityName,
+tcp.COUPON_OLDPRICE as couponOldPrice,
+tcp.COUPON_LOWPRICE as couponLowPrice,
+tcp.COUPON_MAIN as couponMain,
+tcp.COUPON_IMG as couponImg,
+tcy.CITY_ID as cityId
+  <if test="userId != null and userId  !=''">
+,
+(select tnp.NOWPRICE_NUMBER       from tb_nowprice as tnp  where tnp.USER_ID=(#{userId}) and tnp.COUPON_ID=(tcp.COUPON_ID)) as  nowPrice
+</if>  
+from tb_coupon as tcp JOIN tb_city as tcy on tcp.CITY_ID=tcy.CITY_ID
+where tcy.CITY_ID=#{cityId};
+ </select> 
+ 
+ <select id="selectSuccessUserList" resultType="map" parameterType="map" >
+SELECT   tu.USER_ID AS userId,concat(SUBSTRING(tu.USER_NAME,1,1),'*',SUBSTRING(tu.USER_NAME,3,100))  AS userName,DATE_FORMAT(acs.SHARE_TIME,'%Y-%m-%d %H:%m:%S')  AS shareTime
+  from  tb_nowprice  as tnp JOIN  admin_share as acs JOIN tb_coupon as tcp JOIN tb_user as tu
+ on tnp.USER_ID=acs.USER_ID AND tu.USER_ID=tnp.USER_ID AND tnp.COUPON_ID=acs.COUPON_ID AND tnp.COUPON_ID=tcp.COUPON_ID
+WHERE tnp.NOWPRICE_NUMBER &lt;=tcp.COUPON_LOWPRICE  AND tcp.CITY_ID=#{cityId}
+
+</select>
+
+</mapper>

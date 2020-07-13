@@ -1,0 +1,45 @@
+一、先进入sql文件夹 找到youhuiquan.sql文件  
+在mysql数据库中运行出youhuiquan库   保证有数据存储空间
+
+二、本机安装jdk与maven 并搭建2个开发环境工具的环境变量
+  为了后面的cmd命令窗口  能够执行jar包运行命令
+
+三、框架源代码不用管 参考作用 
+       找到test文件夹中的三个jar包文件
+   （SpringCloud分布式框架的三个SpringBoot子项目模块）
+
+  准备直接按启动顺序运行  cmd打开命令窗口 cd切换到test磁盘路径下
+  1.运行  >java  -jar  teach-eurake1.jar 
+   启动分布式框架  注册与服务中心 启动后 （等线程完全启动）
+              localhost:9001   浏览器访问到注册中心 控制面板   
+
+  2.再次cmd 打开新的dos命令窗口（多线程分布式）
+        运行>java  -jar  teach-zull1.jar
+        启动分布式框架   zuul路由映射服务  启动后 （等线程完全启动）
+ 	刷新 localhost:9001  可以看见zuul路由服务已经注入 注册中心
+
+  3.再次cmd 打开新的dos命令窗口（多线程分布式）
+     运行>java  -jar  teach-orm1.jar
+     启动分布式框架   ORM层数据传输服务（MyBatis）用于连接数据库查询数据  启动后
+     （等线程完全启动）
+       刷新 localhost:9001  可以看见ORM层数据传输服务已经注入 注册中心
+ 
+四、浏览器网址链接访问
+        1.都启动后   等大概三分钟吧 浏览器输入 localhost:8001/selectCityAll
+         访问ORM层数据传输服务后端控制器  获取查询结果集  返回json数据
+          （有时分布式线程间相互调用 有时间延迟  多回车访问几次 ）
+
+       2.浏览器输入  zull6001.com:6001/teach-orm1/selectCityAll   
+	     （teach-orm1全小写  服务名无法大写）
+      访问zuul路由 映射到ORM层数据传输服务后端控制器  
+           继续获取查询结果集  返回json数据
+
+----------------------------------------
+更多SpringCloud分布式框架开发知识 请访问   https://space.bilibili.com/410274616  学习
+           
+
+
+
+
+
+ 

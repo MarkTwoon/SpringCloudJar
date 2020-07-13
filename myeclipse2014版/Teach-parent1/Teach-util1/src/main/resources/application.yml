@@ -1,0 +1,10 @@
+server: 
+  servlet-path: /
+  error:
+    whitelabel:
+      enabled: false 
+  port: 1190
+  tomcat:
+    uri-encoding: UTF-8  
+        
+ 

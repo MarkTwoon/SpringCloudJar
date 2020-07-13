@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2dc8fc62-8cf1-40cf-9099-8078e906f253" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/apache-maven-3.6.0" />
+        <option name="userSettingsFile" value="D:\apache-maven-3.6.0\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ea6cxNHbdguObIpTJxn5WX88or" />
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/teach-orm1/src/main/java/com/chinasoft/springcloud_1/service/impl" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\ideaWorkSpace\teach-parent1\teach-orm1\src\main\java\com\chinasoft\springcloud_1\service\impl" />
+      <recent name="D:\ideaWorkSpace\teach-parent1\teach-orm1\src\main\java\com\chinasoft\springcloud_1\service" />
+      <recent name="D:\ideaWorkSpace\teach-parent1\teach-orm1\src\main\java\com\chinasoft\springcloud_1\dao" />
+      <recent name="D:\ideaWorkSpace\teach-parent1\teach-orm1\src\main\java\com\chinasoft\springcloud_1\controller" />
+      <recent name="D:\ideaWorkSpace\teach-parent1\teach-orm1\src\main\resources\mybatis\mapper" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.TeachOrm1Application">
+    <configuration name="EurakeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="teach-eurake1" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chinasoft.springcloud_1.EurakeApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TeachEurake1Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="teach-eurake1" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chinasoft.springcloud_1.TeachEurake1Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TeachOrm1Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="teach-orm1" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chinasoft.springcloud_1.OrmApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TeachZull1Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="teach-zull1" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.chinasoft.springcloud_1.ZullApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2dc8fc62-8cf1-40cf-9099-8078e906f253" name="Default Changelist" comment="" />
+      <created>1594547440179</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1594547440179</updated>
+      <workItem from="1594547443974" duration="562000" />
+      <workItem from="1594549126494" duration="24573000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>
